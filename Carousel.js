@@ -2,22 +2,26 @@ let slide=document.querySelectorAll(".slide");
 console.log(slide);
 let counter=0;
 slide.forEach((slide,index) =>{
-slide.style.bottom=`${index *100}%`
+slide.style.left=`${index *100}%`
 })
 
-let goPrev = () =>{
-    counter--
+const goNext = () => {
+    if (counter < slide.length - 1) {
+    counter++;
     slideImgae();
-}
-
-let goNext = () =>{
-    counter++
+    }
+    };
+    const goPrev = () => {
+    if (counter != 0) {
+    counter--;
     slideImgae();
-}
+    }
+    };
+    
 
 
 let slideImgae = () =>{
     slide.forEach((slide) =>{
-        slide.style.transform=`translateY(${counter*100}%)`
+        slide.style.transform=`translateX(-${counter*100}%)`
     })
 }

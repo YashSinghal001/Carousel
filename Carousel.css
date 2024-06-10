@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #161a1d;
+}
 main{
-    box-shadow: 0 0 3px gray;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.142);
     width: 60%;
     height: 500px;
-    margin: 100px auto;
+    margin: 50px auto;
     position: relative;
     overflow: hidden;
 }
@@ -20,9 +23,22 @@ main{
 }
 .nav{
     text-align: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 .nav button{
     font-size: 25px;
-    /* padding: 5px; */
+    background-color: rgb(128, 139, 240);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s linear;
+}
+.nav button:hover{
+    transform: scale(1.06);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.208);
+
 }
